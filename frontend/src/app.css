@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Permanent+Marker&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	@apply bg-black font-montserrat text-white;
+}
+
+h1 {
+	@apply font-marker;
+}
+
+#portal {
+	@apply pointer-events-none fixed top-0 left-0 z-30 min-h-screen min-w-full;
+}
