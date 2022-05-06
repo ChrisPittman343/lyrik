@@ -11,7 +11,7 @@
 	<p class="text-3xl leading-relaxed text-white/80">
 		Something went wrong...
 		<br />
-		Head <a href="/" class="decoration-primary underline"> back</a> to try again.
+		Head <a href="/"> back</a> to try again.
 	</p>
 </div>
 

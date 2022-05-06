@@ -8,7 +8,7 @@ export const get = async ({}: RequestEvent) => {
 			'https://api.musixmatch.com/ws/1.1/chart.tracks.get?' +
 			new URLSearchParams({
 				apikey,
-				chart_name: 'hot',
+				chart_name: 'top',
 				page_size: '50',
 				page: '1',
 				f_has_lyrics: '1'

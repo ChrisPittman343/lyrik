@@ -18,7 +18,7 @@
 		</div>
 	{/each}
 </div>
-<div>
+<div class="flex gap-8 text-lg">
 	{#if showArtist}
 		<div>Artist: {$currentSong.artist}</div>
 	{/if}
@@ -37,6 +37,3 @@
 		<SecondaryButton on:click={() => (showAlbum = true)}>Album</SecondaryButton>
 	{/if}
 </div>
-
-<style lang="postcss">
-</style>
