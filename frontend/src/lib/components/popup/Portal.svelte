@@ -1,23 +1,17 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	let portalContent: Node;
+	let portalChildren: HTMLDivElement;
 
 	onMount(() => {
-		let portalTarget: HTMLElement = document.getElementById('portal');
+		// Already in app.html, guaranteed to exist
+		const portal = document.getElementById('portal');
 
-		if (!portalTarget) {
-			portalTarget = document.createElement('div');
-			portalTarget.id = 'portal';
-			portalContent.parentElement.removeChild(portalContent);
-			portalTarget.appendChild(portalContent);
-			document.body.appendChild(portalTarget);
-		} else {
-			portalTarget.appendChild(portalContent);
-		}
+		// Don't care about wrapper elements, everything in portals is absolute anyway
+		portal.appendChild(portalChildren);
 	});
 </script>
 
-<div bind:this={portalContent}>
+<div bind:this={portalChildren}>
 	<slot />
 </div>
